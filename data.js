@@ -2,7 +2,7 @@ export const portfolioData = {
   biography: {
     title: "Eva Is Romero",
     photo: "https://dibuixosipintures.weebly.com/uploads/8/9/0/7/8907336/8175969.jpg",
-    email: "evaisromero@yahoo.es",
+    email: "evaisromero@gmail.com",
     instagram: "Eva Is Art",
     text: "Des de la infantesa començo a dibuixar podent gaudir de figures del món de la pintura Gironina com Josep Perpinyà i Quim Corominas. El meu treball és una forma d'introspecció i recerca de la pròpia identitat a través de la pintura, sovint amb un humanisme romàntic que busca la bellesa en la vulnerabilitat. El meu recorregut professional m'ha portat des de la cartografia a Mèxic fins a la docència artística a les escoles rurals de l'Empordà.",
     education: [
