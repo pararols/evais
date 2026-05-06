@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eva Is Romero | Dibuixos i Pintures</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <div class="logo">Eva Is Romero</div>
+      <ul class="nav-links">
+        <li><a href="#home">Inici</a></li>
+        <li><a href="#fauna-i-paisatge">Fauna i Paisatge</a></li>
+        <li><a href="#el-retrat">El Retrat</a></li>
+        <li><a href="#tallers">Tallers</a></li>
+        <li><a href="#biografia">Biografia</a></li>
+        <li><a href="#exposicions">Exposicions</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container">
+        <h1>Eva Is Romero</h1>
+        <p>Una forma d'introspecció i recerca de la pròpia identitat a través de la pintura.</p>
+      </div>
+    </section>
+
+    <div id="galleries-container"></div>
+
+    <section id="tallers" class="container">
+      <h2 class="section-title" id="workshops-title"></h2>
+      <p id="workshops-desc" style="text-align: center; color: var(--text-secondary); margin-bottom: 4rem; max-width: 600px; margin-left: auto; margin-right: auto;"></p>
+      <div id="workshops-grid" class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));"></div>
+    </section>
+
+    <section id="biografia" class="container">
+      <h2 class="section-title">Biografia i Trajectòria</h2>
+      <div class="bio-wrapper">
+        <div class="bio-photo">
+          <img id="artist-photo" src="" alt="Eva Is Romero">
+        </div>
+        <div class="bio-content">
+          <p id="bio-text" style="font-size: 1.1rem; margin-bottom: 2rem;"></p>
+          <h3 style="margin-bottom: 1rem;" class="text-gold">Formació i Estudis</h3>
+          <ul id="education-list" style="margin-bottom: 2rem;"></ul>
+          <h3 style="margin-bottom: 1rem;" class="text-gold">Exposicions Destacades</h3>
+          <ul id="exhibitions-list" style="margin-bottom: 2rem;"></ul>
+          <h3 style="margin-bottom: 1rem;" class="text-gold">Altres Projectes</h3>
+          <ul id="other-list"></ul>
+        </div>
+      </div>
+      <div class="contact-box">
+        <p>Contacte: <a href="mailto:evaisromero@yahoo.es" class="text-gold">evaisromero@yahoo.es</a> | Instagram: <span class="text-gold">@evaisart</span></p>
+      </div>
+    </section>
+
+    <section id="exposicions" class="container">
+      <h2 class="section-title">Novetats i Actes</h2>
+      <div id="posters-grid" class="grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Eva Is Romero. Tots els drets reservats.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

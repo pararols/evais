@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
+
+:root {
+  --bg-color: #121212;
+  --surface-color: #1a1a1a;
+  --primary-color: #d4af37; /* Gold */
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0a0;
+  --text-muted: #666666;
+  --border-color: #2a2a2a;
+  --nav-height: 80px;
+  --container-max: 1200px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .serif {
+  font-family: 'Newsreader', serif;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Layout */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+section {
+  padding: 8rem 0;
+}
+
+/* Navigation */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--nav-height);
+  background: rgba(18, 18, 18, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+}
+
+.nav-links a:hover, .nav-links a.active {
+  color: var(--primary-color);
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  background: linear-gradient(to bottom, rgba(18,18,18,0.2), rgba(18,18,18,1)), 
+              url('https://dibuixosipintures.weebly.com/uploads/8/9/0/7/8907336/8175969.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero h1 {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Gallery Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 4rem;
+}
+
+.artwork-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.artwork-img-wrapper {
+  background: var(--surface-color);
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.artwork-img-wrapper:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-5px);
+}
+
+.artwork-info {
+  margin-top: 1.5rem;
+}
+
+.artwork-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.artwork-meta {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Typography Helpers */
+.text-gold { color: var(--primary-color); }
+.section-title {
+  font-size: 3rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  padding: 4rem 0;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+  color: var(--text-muted);
+}
+
+/* Biography Layout */
+.bio-wrapper {
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+  margin-bottom: 4rem;
+}
+
+.bio-photo {
+  flex: 1;
+  max-width: 400px;
+  border: 1px solid var(--primary-color);
+  padding: 1rem;
+  background: var(--surface-color);
+}
+
+.bio-content {
+  flex: 2;
+}
+
+.contact-box {
+  text-align: center;
+  padding: 2rem;
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  margin-top: 4rem;
+  font-size: 1.2rem;
+}
+
+/* Workshop Card */
+.workshop-card {
+  padding: 2.5rem;
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.workshop-card:hover {
+  border-color: var(--primary-color);
+}
+
+.workshop-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+/* Mobile adjustments */
+@media (max-width: 992px) {
+  .bio-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .bio-photo {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 { font-size: 3rem; }
+  .grid { grid-template-columns: 1fr; }
+  .nav-links { display: none; }
+}
