@@ -77,7 +77,7 @@ function renderBiography() {
   });
 
   const otherList = document.getElementById('other-list');
-  portfolioData.biography.other.forEach(item => {
+  portfolioData.biography.career.forEach(item => {
     const li = document.createElement('li');
     li.style.marginBottom = '0.5rem';
     li.innerHTML = `<span class="text-gold" style="margin-right: 0.5rem;">•</span> ${item}`;
