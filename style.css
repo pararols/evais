@@ -23,6 +23,11 @@ html {
   scroll-behavior: smooth;
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 body {
   font-family: 'Inter', sans-serif;
   background-color: var(--bg-color);
@@ -144,6 +149,7 @@ nav .container {
 .artwork-card {
   position: relative;
   overflow: hidden;
+  animation: fadeIn 0.8s ease-out forwards;
 }
 
 .artwork-img-wrapper {
@@ -155,7 +161,8 @@ nav .container {
 
 .artwork-img-wrapper:hover {
   border-color: var(--primary-color);
-  transform: translateY(-5px);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1);
 }
 
 .artwork-info {

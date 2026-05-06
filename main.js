@@ -119,6 +119,9 @@ function handleNavigation() {
       link.classList.remove('active');
       if (link.getAttribute('href').includes(current)) {
         link.classList.add('active');
+        // Actualitzem el títol de la pestanya
+        const sectionName = link.innerText;
+        document.title = `Eva Is Romero | ${sectionName}`;
       }
     });
   });
